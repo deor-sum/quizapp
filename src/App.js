@@ -1,12 +1,14 @@
+import { Routes, Route } from "react-router-dom";
 import "./App.scss";
-
-function App() {
+import Login from "./components/Login";
+import Home from "./components/Home";
+const App = () => {
   return (
-    <div className="App bg-gray-800 w-full h-screen flex justify-center items-center">
-      <h1 className="text-white text-3xl font-bold">Hello world!</h1>
-      <h1>TEST SASS</h1>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<Home />} />
+      <Route path="login" element={<Login />} />
+    </Routes>
   );
-}
+};
 
 export default App;
